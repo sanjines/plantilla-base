@@ -1,0 +1,34 @@
+//- mixin menuPage()
+//-   nav.indice
+//-     for val, key in menuPages
+//-       a(href= `#section${key +1}`)= val.titulo
+
+
+mixin menuComponent(section, sectionContent)
+  a(class= 'blog__menu-link' href= `#${section}`)= `${sectionContent}`
+
+//- mixin contenido(texto)
+//-   -for(let items of menuPages)
+//-     div.contenido
+//-       div.post
+//-         h1.titulo= items.titulo
+//-         p.fecha= items.fecha
+//-         p= texto
+
+
+mixin sectionElement(id, titulo, fecha, texto)
+  div.post
+    h1(class= 'post__titulo' id= id)= titulo
+    p(class= 'post__date')= fecha
+    p(class= 'post__texto')= texto
+    block post
+
+  //- COMPONENTE SUBMENU DE ASIDE PARA LAS SUBPAGINAS
+
+mixin subMenu(href, ...items)
+  -let add = 1;
+  nav(class= 'blog__nav')
+    ul(class= 'blog__menu')
+      each item in items
+        li(class= 'blog__menu-item')
+          a(class= 'blog__menu-link', href= `${href}` + `${add++}`)= item

@@ -1,0 +1,80 @@
+/*=============== THEME ===============*/
+/*========== Variables Dark theme ==========*/
+// body.dark-theme {
+//   --first-color     : hsl(31, 76%, 74%);
+//   --button-color    : hsl(0, 0%, 24%);
+//   --button-color-alt: hsl(0, 0%, 28%);
+//   --title-color     : hsl(0, 0%, 95%);
+//   --text-color      : hsl(0, 0%, 75%);
+//   --body-color      : hsl(0, 0%, 12%);
+//   --container-color : hsl(0, 0%, 16%);
+//   --border-color    : hsl(0, 0%, 20%);
+// }
+
+body.dark-theme {
+  --color-first:        hsl(0, 0%, 100%);
+  --color-secondary     : red;
+  // --color-button    : hsl(0, 0%, 24%);
+  --color-button: hsl(0, 0%, 28%);
+  --color-title     : hsl(210, 100%, 17%);
+  --color-text      : hsl(0, 0%, 75%);
+  // --color-body      : hsl(0, 0%, 12%);
+  --color-body      : orange;
+  --color-container : hsl(0, 0%, 16%);
+  --color-border    : hsl(0, 0%, 20%);
+  --color-footer    : hsl(350, 100%, 88%);
+}
+
+/*========== Button Dark/Light ==========*/
+.change-theme {
+  color    : var(--title-color);
+  font-size: 1.25rem;
+  cursor   : pointer;
+}
+
+/*==========
+ Cambios de color en algunas partes de el sitio web,
+en tema oscuro
+==========*/
+
+// .dark-theme .change-theme,
+// .dark-theme .nav__toggle,
+// .dark-theme .nav__shop,
+// .dark-theme .button--gray {
+//   color: hsl(0, 0%, 15%);
+
+// }
+
+// .dark-theme .bgc-footer {
+//   background-color: var(--color-lightBlue-900);
+// }
+
+.dark-theme .scroll-header {
+  box-shadow: 0 1px 4px hsla(0, 0%, 4%, .3);
+}
+
+//------nelo
+.dark-theme .t-shape {
+  background-color: var(--first-color);
+}
+.dark-theme .t-footer {
+  background-color: var(--color-footer);
+}
+
+.dark-theme a:hover {
+  color: rgb(86, 103, 119);
+}
+.dark-theme .der {
+  color: rgb(224, 230, 235);
+}
+
+
+.scroll-header .change-theme,
+.scroll-header .nav__toggle,
+.scroll-header .nav__shop {
+  color: var(--title-color);
+}
+
+.dark-theme::-webkit-scrollbar {
+  background: hsl(0, 0%, 30%)
+}

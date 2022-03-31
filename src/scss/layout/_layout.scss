@@ -1,0 +1,41 @@
+@use '../abstracts/mixins' as m;
+
+.l-wrap {
+  height: auto;
+}
+
+.l-wrapper {
+  max-width: var(--max-w);
+  // padding: 1rem;
+  margin: {
+    right: auto;
+    left: auto;
+  }
+}
+
+.l-grid {
+  display: grid;
+}
+
+.l-column-centering {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  padding:        4em;
+}
+
+// =======================================================
+// - *** TAMAÑO DE PANTALLA MEDIUM (md -768px - 48em) ***
+// =======================================================
+
+@include m.bp(768){
+  .l-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include m.bp(992){
+  .l-grid{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
